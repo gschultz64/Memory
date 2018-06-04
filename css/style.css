@@ -5,10 +5,25 @@ body {
 
 h2 {
   font-size: 2rem;
+  margin-bottom: 0;
 }
 
-button {
+p {
+  display: inline-block;
+  margin-bottom: .5em;
+  width: 60%;
+  text-align: center;
+}
+
+.btn {
+  background-color: rgb(230, 230, 222);
+  color: rgb(83, 83, 83);
   margin: 1em;
+}
+
+.btn:hover {
+  background-color: rgb(117, 117, 117);
+  color: #fff;
 }
 
 .col {
