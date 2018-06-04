@@ -1,0 +1,40 @@
+body {
+  background: lightgray;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+button {
+  margin: 1em;
+}
+
+.col {
+  background-color: lightcyan;
+  height: 100px;
+  margin: 1%;
+  width: 20% !important;
+}
+
+.container {
+  border: 1px solid gray;
+  width: 80%;
+  display: inline-block;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .col {
+  width: 25% !important;
+  margin: 1% 4%;
+  }
+}
+
+@media (max-width: 600px) {
+  .col {
+  width: 40% !important;
+  margin: 1% 2%;
+  }
+}
