@@ -1,5 +1,6 @@
 body {
-  background: lightgray;
+  background: black;
+  color: #fff;
   text-align: center;
 }
 
@@ -27,14 +28,16 @@ p {
 }
 
 .col {
-  background-color: lightcyan;
+  /* background-color: lightcyan; */
   height: 100px;
   margin: 1%;
   width: 20% !important;
+  border: #fff solid 2px;
+  border-radius: 5px;
 }
 
 .container {
-  border: 1px solid gray;
+  /* border: 1px solid gray; */
   width: 80%;
   display: inline-block;
   position: relative;

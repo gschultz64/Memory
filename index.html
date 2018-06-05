@@ -19,20 +19,22 @@
     <h1>A Colorful Memory Game</h1>
     <div class="gameInstruct">
       <h2>How to Play:</h2>
+      <!-- Could use modal from materialize javascript to display the rules -->
       <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, click another square. Repeat
         as many times as you want!</p>
       <!-- <p>Player 1 starts: Click to turn over any two squares. If the two squares match, you win! If they don't match, Player 2 takes a turn to click two squares. Repeat as many times as you want!</p>
           <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, the computer takes
             a turn to click two squares. Repeat as many times as you want!</p> -->
+      <!-- Tooltip for win notification -->
     </div>
     <div id="buttons">
-      <a class="waves-effect waves-light btn">Solitaire Game
+      <a class="waves-effect waves-purple btn" id="solitaire">Solitaire Game
         <i class="material-icons left">person</i>
       </a>
-      <a class="waves-effect waves-light btn">Player vs. Player
+      <a class="waves-effect waves-purple btn" id="twoPlayers">Player vs. Player
         <i class="material-icons left">people</i>
       </a>
-      <a class="waves-effect waves-light btn">Play vs. Computer
+      <a class="waves-effect waves-purple btn" id="computer">Play vs. Computer
         <i class="material-icons right">computer</i>
       </a>
     </div>
@@ -62,7 +64,7 @@
   </div>
   <!-- end container -->
   <div>
-    <a class="waves-effect waves-light btn">Reset Game
+    <a class="waves-effect waves-purple btn" id="autorenew">Reset Game
       <i class="material-icons right">autorenew</i>
     </a>
   </div>
