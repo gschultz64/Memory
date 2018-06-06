@@ -22,42 +22,38 @@
       <!-- Could use modal from materialize javascript to display the rules -->
       <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, click another square. Repeat
         as many times as you want!</p>
-      <!-- <p>Player 1 starts: Click to turn over any two squares. If the two squares match, you win! If they don't match, Player 2 takes a turn to click two squares. Repeat as many times as you want!</p>
-          <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, the computer takes
-            a turn to click two squares. Repeat as many times as you want!</p> -->
-      <!-- Tooltip for win notification -->
     </div>
     <div id="buttons">
-      <a class="waves-effect waves-purple btn" id="solitaire">Solitaire Game
+      <a class="waves-effect waves-purple btn modal-trigger" id="solitaire">Solitaire Game
         <i class="material-icons left">person</i>
       </a>
-      <a class="waves-effect waves-purple btn" id="twoPlayers">Player vs. Player
+      <a class="waves-effect waves-purple btn modal-trigger" id="twoPlayers">Player vs. Player
         <i class="material-icons left">people</i>
       </a>
-      <a class="waves-effect waves-purple btn" id="computer">Play vs. Computer
+      <a class="waves-effect waves-purple btn modal-trigger" id="computer">Play vs. Computer
         <i class="material-icons right">computer</i>
       </a>
     </div>
     <div class="row">
-      <div class="col s6 m4 l3 offset-s1 offset-m1 offset-l1"></div>
-      <div class="col s6 m4 l3"></div>
-      <div class="col s6 m4 l3 offset-s1"></div>
-      <div class="col s6 m4 l3 offset-m1"></div>
+      <div class="col s6 m4 l3 offset-s1 offset-m1 offset-l1" id="box1"></div>
+      <div class="col s6 m4 l3" id="box2"></div>
+      <div class="col s6 m4 l3 offset-s1" id="box3"></div>
+      <div class="col s6 m4 l3 offset-m1" id="box4"></div>
 
-      <div class="col s6 m4 l3 offset-s1 offset-l1"></div>
-      <div class="col s6 m4 l3"></div>
-      <div class="col s6 m4 l3 offset-s1 offset-m1"></div>
-      <div class="col s6 m4 l3"></div>
+      <div class="col s6 m4 l3 offset-s1 offset-l1" id="box5"></div>
+      <div class="col s6 m4 l3" id="box6"></div>
+      <div class="col s6 m4 l3 offset-s1 offset-m1" id="box7"></div>
+      <div class="col s6 m4 l3" id="box8"></div>
 
-      <div class="col s6 m4 l3 offset-s1 offset-l1"></div>
-      <div class="col s6 m4 l3 offset-m1"></div>
-      <div class="col s6 m4 l3 offset-s1"></div>
-      <div class="col s6 m4 l3"></div>
+      <div class="col s6 m4 l3 offset-s1 offset-l1" id="box9"></div>
+      <div class="col s6 m4 l3 offset-m1" id="box10"></div>
+      <div class="col s6 m4 l3 offset-s1" id="box11"></div>
+      <div class="col s6 m4 l3" id="box12"></div>
 
-      <div class="col s6 m4 l3 offset-s1 offset-m1 offset-l1"></div>
-      <div class="col s6 m4 l3"></div>
-      <div class="col s6 m4 l3 offset-s1"></div>
-      <div class="col s6 m4 l3 offset-m1"></div>
+      <div class="col s6 m4 l3 offset-s1 offset-m1 offset-l1" id="box13"></div>
+      <div class="col s6 m4 l3" id="box14"></div>
+      <div class="col s6 m4 l3 offset-s1" id="box15"></div>
+      <div class="col s6 m4 l3 offset-m1" id="box16"></div>
       <!-- hide last div on medium screen -->
     </div>
     <!-- end row -->
@@ -68,6 +64,7 @@
       <i class="material-icons right">autorenew</i>
     </a>
   </div>
+
 
 </body>
 
