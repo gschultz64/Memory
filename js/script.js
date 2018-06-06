@@ -1,20 +1,53 @@
 var colors = [
   '#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F'
 ];
-// var randomColor = colors[Math.floor(Math.random() * colors.length)];
-var randomColors;
 var squares = [
-  [$('#box1'), $('#box2'), $('#box3'), $('#box4')],
-  [$('#box5'), $('#box6'), $('#box7'), $('#box8')],
-  [$('#box9'), $('#box10'), $('#box11'), $('#box12')],
-  [$('#box13'), $('#box14'), $('#box15'), $('#box16')],
+  $('#box1'), $('#box2'), $('#box3'), $('#box4'),
+  $('#box5'), $('#box6'), $('#box7'), $('#box8'),
+  $('#box9'), $('#box10'), $('#box11'), $('#box12'),
+  $('#box13'), $('#box14'), $('#box15'), $('#box16')
 ];
+// New empty array that will hold 2 copies of each color code from colors array
+var moreColors = [];
+moreColors.push(colors);
+moreColors.push(colors);
+var randomColors = moreColors.reduce(function(accumulator, currentValue) {
+  return accumulator.concat(currentValue);
+})
+
+console.log(randomColors);
+
+
+//Shuffle colors in array randomColors
+Array.prototype.shuffle = function () {
+  var input = this;
+
+  for (var i = input.length - 1; i >= 0; i--) {
+
+    var randomIndex = Math.floor(Math.random() * (i + 1));
+    var itemAtIndex = input[randomIndex];
+
+    input[randomIndex] = input[i];
+    input[i] = itemAtIndex;
+  }
+  return input;
+}  
+
+
+// For loop to randomly add one color for each item from squares array (each square on the board)
+// for (let i = 0; i < squares.length; i++) {
+//   randomColors[i] = colors[Math.floor(Math.random() * colors.length)];
+// }
+// console.log(randomColors);
+// // Limit 2 of each color being put into randomColors
+// $.inArray()
+
 
 $(document).ready(function () {
   // Initialize Materialize components
   M.AutoInit(); 
   
-  flipSquare();
+  // flipSquare();
   
   //default audio/background music?
 
@@ -46,14 +79,10 @@ $(document).ready(function () {
 });
 
 function flipSquare() {
+  
   // click on square and change the color
   $('.col').click(function () {
-    for (let i = 0; i < squares.length; i++) {
-      randomColors[i] = colors[Math.floor(Math.random() * colors.length)]; 
-      $(this).css("background-color", randomColor);
-      console.log(randomColor);
-    }
-    
+      $(this).css("background-color", );
   });
 }
 
