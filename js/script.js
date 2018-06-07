@@ -27,36 +27,25 @@ function shuffle(array) {
 // Shuffle the order of colors in array moreColors and put in new array randomColors
 var randomColors = shuffle(moreColors);
 console.log(randomColors);
-// Empty array to hold ids of each div with class "col"
-var squares = [];
-
-squares.push($('#0'));
+// array to hold ids of each div with class "col"
+var squares = ['#0', '#1', '#2', '#3', '#4', '#5', '#6', '#7',
+  '#8', '#9', '#10', '#11', '#12', '#13', '#14', '#15'];
 console.log(squares);
 
-  for (let i = 0; i < squares.length; i++) {
-    // squares[i] = randomColors[i];
-    // console.log(squares);
-    $(squares[i]).css('background-color', randomColors[i]);
-  }
 
-
-// $.each(squares, function () {
-// })
 // if (squares[i].css('background-color')) {
 
 // } else {
 
 // }
 
-function flipSquare() {  
+function flipSquare() {
   // click on square and change the color
-    $('.col').click(function() {
-      //Set random colors for each square   
-      // $(this).css("background-color", );
-    // });
-    console.log("square clicked");
-    });
-      
+  for (let i = 0; i < squares.length; i++) {
+    $(squares[i]).click(function () {
+      $(this).css("background-color", randomColors[i]);
+    });  
+  }
 }
 
 
@@ -64,7 +53,7 @@ function flipSquare() {
 // in flipSquare: select color from randomColors when click on square happens
 
 // function checkForMatch() {
-  // Check for matching colors when two squares are "flipped"
+// Check for matching colors when two squares are "flipped"
 
 // }
 
