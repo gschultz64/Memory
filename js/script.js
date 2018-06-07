@@ -4,6 +4,8 @@ var colors = [
 ];
 // New array that holds 2 copies of each color code from colors array
 var moreColors = colors.concat(colors);
+// var moreColors = ['#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F', 
+// '#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F']
 //Function to shuffle items in array based on Fisher–Yates shuffle
 // https://bost.ocks.org/mike/shuffle/ was helpful
 function shuffle(array) {
@@ -21,8 +23,9 @@ function shuffle(array) {
 
   return array;
 }
-// Shuffle the order of colors in array
+// Shuffle the order of colors in array moreColors and put in new array randomColors
 var randomColors = shuffle(moreColors);
+// Empty array to hold ids of each div with class "col"
 var squares = [];
 
 
@@ -31,6 +34,9 @@ function assignColors() {
     $(squares[i]).css('background-color', randomColors[i]);
   }
 }
+
+
+
 
 function flipSquare() {
   
