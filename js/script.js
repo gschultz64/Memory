@@ -6,6 +6,7 @@ var colors = [
 var moreColors = colors.concat(colors);
 // var moreColors = ['#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F', 
 // '#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F']
+
 //Function to shuffle items in array based on Fisher–Yates shuffle
 // https://bost.ocks.org/mike/shuffle/ was helpful
 function shuffle(array) {
@@ -25,31 +26,42 @@ function shuffle(array) {
 }
 // Shuffle the order of colors in array moreColors and put in new array randomColors
 var randomColors = shuffle(moreColors);
+console.log(randomColors);
 // Empty array to hold ids of each div with class "col"
 var squares = [];
 
+squares.push($('#0'));
+console.log(squares);
 
-function assignColors() {
   for (let i = 0; i < squares.length; i++) {
+    // squares[i] = randomColors[i];
+    // console.log(squares);
     $(squares[i]).css('background-color', randomColors[i]);
   }
-}
 
 
+// $.each(squares, function () {
+// })
+// if (squares[i].css('background-color')) {
 
+// } else {
 
-function flipSquare() {
-  
+// }
+
+function flipSquare() {  
   // click on square and change the color
-  $('.col').click(function () {
-    //Set random colors for each square
-    $(this).css("background-color", );
-  });
+    $('.col').click(function() {
+      //Set random colors for each square   
+      // $(this).css("background-color", );
+    // });
+    console.log("square clicked");
+    });
+      
 }
+
+
 // if/else statement so that only 1 square has color visible at a time
 // in flipSquare: select color from randomColors when click on square happens
-
-
 
 // function checkForMatch() {
   // Check for matching colors when two squares are "flipped"
