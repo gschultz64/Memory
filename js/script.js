@@ -26,39 +26,49 @@ function shuffle(array) {
 }
 // Shuffle the order of colors in array moreColors and put in new array randomColors
 var randomColors = shuffle(moreColors);
-console.log(randomColors);
 // array to hold ids of each div with class "col"
 var squares = ['#0', '#1', '#2', '#3', '#4', '#5', '#6', '#7',
   '#8', '#9', '#10', '#11', '#12', '#13', '#14', '#15'];
-console.log(squares);
 
 
-// if (squares[i].css('background-color')) {
-
-// } else {
-
-// }
-
-function flipSquare() {
-  // click on square and change the color
+function clickAction() {
   for (let i = 0; i < squares.length; i++) {
-    $(squares[i]).click(function () {
-      $(this).css("background-color", randomColors[i]);
-    });  
+    $(this).css("background-color", randomColors[i]);
+    // console.log("box " + squares[i] + " is " + randomColors[i]);
+    
+  }
+}
+function flipSquare() {
+  for (let i = 0; i < squares.length; i++) {
+    // click on square and color appears
+    $(squares[i]).on('click', clickAction);
+    
   }
 }
 
 
-// if/else statement so that only 1 square has color visible at a time
-// in flipSquare: select color from randomColors when click on square happens
+
+// for (let i = 0; i < squares.length; i++) {
+//   $(this).css("background-color", '');
+//   console.log("box " + squares[i] + " is empty");
+
+
+
+
+
 
 // function checkForMatch() {
-// Check for matching colors when two squares are "flipped"
-
+// // Check for matching colors when two squares are "flipped"
+//   if (squares[i] === ) {
+//     console.log("You won!");
+//   } else {
+//     console.log("Try again.");
+//   }
 // }
 
 // win conditions
 //  two colored divs need to match exactly 
+// when colors are matched, remove from randomColors?
 //  Solitaire Mode
 //  Player vs. Player Mode
 //  Player vs. AI Mode
