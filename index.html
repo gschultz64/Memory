@@ -17,23 +17,32 @@
 <body>
   <div class="container">
     <h1>A Colorful Memory Game</h1>
-    <div class="gameInstruct">
+    <section class="gameInstruct">
       <h2>How to Play:</h2>
-      <!-- Could use modal from materialize javascript to display the rules -->
       <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, click another square. Repeat
         as many times as you want!</p>
-    </div>
-    <div id="buttons">
-      <a class="waves-effect waves-purple btn modal-trigger" id="solitaire">Solitaire Game
+    </section>
+    <section id="buttons">
+      <a class="waves-effect waves-purple btn" id="solitaire">Solitaire Game
         <i class="material-icons left">person</i>
       </a>
-      <a class="waves-effect waves-purple btn modal-trigger" id="twoPlayers">Player vs. Player
+      <a class="waves-effect waves-purple btn" id="twoPlayers">Player vs. Player
         <i class="material-icons left">people</i>
       </a>
-      <!-- <a class="waves-effect waves-purple btn modal-trigger" id="computer">Play vs. Computer
-        <i class="material-icons right">computer</i>
-      </a> -->
-    </div>
+      <a class="waves-effect waves-purple btn" id="autorenew">Reset Game
+        <i class="material-icons right">autorenew</i>
+      </a>
+    </section>
+    <section class="score-panel">
+      <!-- <ul class="stars">
+        <li>
+          <i class="material-icons">stars</i>
+        </li>
+      </ul> -->
+      <span class="moves"></span> Move(s)
+      <div class="timer">
+      </div>
+    </section>
     <div class="row">
       <div class="col s6 m4 l3 offset-s1 offset-m1 offset-l1" id="0"></div>
       <div class="col s6 m4 l3" id="1"></div>
@@ -60,9 +69,7 @@
   </div>
   <!-- end container -->
   <div>
-    <a class="waves-effect waves-purple btn" id="autorenew">Reset Game
-      <i class="material-icons right">autorenew</i>
-    </a>
+
   </div>
 
 
