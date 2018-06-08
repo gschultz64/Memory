@@ -39,7 +39,7 @@ function clickAction() {
   }
   var parsedId = parseInt(this.id);
   $(this).css("background-color", randomColors[parsedId]);
-  // console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
+  console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
   checkForMatch();
 }
 function flipSquare() {
@@ -65,27 +65,28 @@ function checkForMatch() {
   }
   // winMessage();
 }
+// add disabled class to colors after match
 
 // have a timer, lose when timer runs out
-var interval;
-var startingTime = 60;
-var remainingTime = 0;
+// var interval;
+// var startingTime = 60;
+// var remainingTime = 0;
 
-function startTimer() {
-  startingTime--;
-  if(remainingTime <= 0) {
-    //lose condition or game over
-    console.log('the game is over');
-  }
-  $('.timer').append("<p>" + "0.00:" + remainingTime + "</p>");
-  console.log('timer revealed');
-}
+// function startTimer() {
+//   startingTime--;
+//   if(remainingTime <= 0) {
+//     //lose condition or game over
+//     console.log('the game is over');
+//   }
+//   $('.timer').append("<p>" + "0.00:" + remainingTime + "</p>");
+//   console.log('timer revealed');
+// }
 // count player moves
-function countMoves() {
-  moves++;
-  counter.text("moves");
-  startTimer();
-}
+// function countMoves() {
+//   moves++;
+//   counter.text("moves");
+//   startTimer();
+// }
 // win conditions
 //  two colored divs need to match exactly 
 // when colors are matched, remove from randomColors? or keep them active and unclickable
@@ -95,7 +96,7 @@ function countMoves() {
 $(document).ready(function () {
   // Initialize Materialize components
   M.AutoInit();
-  countMoves();
+  // countMoves();
   flipSquare();
 
   
@@ -118,17 +119,11 @@ $(document).ready(function () {
     $('p').text("Player 1 starts: Click to turn over any two squares. If the two squares match, you win! If they don't match, Player 2 takes a turn to click two squares. Repeat as many times as you want!");
   });
 
-  // PvAi Button Click
-  // $('#computer').click(function () {
-  // Set game to play against computer/ai
-  // Display PvAi rules
-  // $('p').text("Click to turn over any two squares. If the two squares match, you win! If they don't match, the computer takes a turn to click two squares. Repeat as many times as you want!");
-  // });
-
   // Reset Button
   $('#autorenew').click(function () {
     $('.col').css('background-color', '');
     // randomColors needs to refresh when this button is clicked!
+    shuffle(randomColors);
   });
 
 });
