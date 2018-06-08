@@ -30,31 +30,22 @@ var randomColors = shuffle(moreColors);
 var squares = ['#0', '#1', '#2', '#3', '#4', '#5', '#6', '#7',
   '#8', '#9', '#10', '#11', '#12', '#13', '#14', '#15'];
 
-
 function clickAction() {
   for (let i = 0; i < squares.length; i++) {
-    $(this).css("background-color", randomColors[i]);
-    // console.log("box " + squares[i] + " is " + randomColors[i]);
-    
+    $(squares[i]).css("background-color", '');
+    console.log("all boxes are cleared");
   }
+  var parsedId = parseInt(this.id);
+  $(this).css("background-color", randomColors[parsedId]);
+  console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
 }
 function flipSquare() {
   for (let i = 0; i < squares.length; i++) {
     // click on square and color appears
     $(squares[i]).on('click', clickAction);
-    
+
   }
 }
-
-
-
-// for (let i = 0; i < squares.length; i++) {
-//   $(this).css("background-color", '');
-//   console.log("box " + squares[i] + " is empty");
-
-
-
-
 
 
 // function checkForMatch() {
@@ -66,12 +57,13 @@ function flipSquare() {
 //   }
 // }
 
+// have a timer, lose when timer runs out
+
 // win conditions
 //  two colored divs need to match exactly 
-// when colors are matched, remove from randomColors?
+// when colors are matched, remove from randomColors? or keep them active and unclickable
 //  Solitaire Mode
 //  Player vs. Player Mode
-//  Player vs. AI Mode
 
 $(document).ready(function () {
   // Initialize Materialize components
@@ -99,11 +91,11 @@ $(document).ready(function () {
   });
 
   // PvAi Button Click
-  $('#computer').click(function () {
+  // $('#computer').click(function () {
     // Set game to play against computer/ai
     // Display PvAi rules
-    $('p').text("Click to turn over any two squares. If the two squares match, you win! If they don't match, the computer takes a turn to click two squares. Repeat as many times as you want!");
-  });
+    // $('p').text("Click to turn over any two squares. If the two squares match, you win! If they don't match, the computer takes a turn to click two squares. Repeat as many times as you want!");
+  // });
 
   // Reset Button
   $('#autorenew').click(function () {
