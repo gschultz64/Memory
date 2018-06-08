@@ -38,14 +38,14 @@ function clickAction() {
       $(squares[i]).css("background-color", '');
       moves = 0;
     }
-  } 
+  }
 
   var parsedId = parseInt(this.id);
   $(this).css("background-color", randomColors[parsedId]);
   console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
   countMoves();
   console.log("Click # " + moves);
-  // checkForMatch();
+  checkForMatch();
 }
 
 // count player moves
@@ -70,15 +70,18 @@ function flipSquare() {
 
 function checkForMatch() {
   // // Check for matching colors when two squares are "flipped"
-  for (let i = 0; i < squares.length; i++) {
-    if ($(this).css('background-color', randomColors[i])) {
+  if (moves == 2) {
+    // console.log($('previousElementSibling').style.backgroundColor);
+    if ($('div').css("background-color") == $('div').prev().css("background-color")) {
+      // 
       console.log("You won!");
     } else {
       console.log("Try again.");
     }
-  }
-  // winMessage();
+  } 
 }
+  // winMessage();
+
 // add disabled class to colors after match
 
 // have a timer, lose when timer runs out
