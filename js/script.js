@@ -33,26 +33,40 @@ var squares = ['#0', '#1', '#2', '#3', '#4', '#5', '#6', '#7',
 
 // When player clicks on a square, change the background color to one of randomColors 
 function clickAction() {
-  for (let i = 0; i < squares.length; i++) {
-    $(squares[i]).css("background-color", '');
-    // console.log("all boxes are cleared");
-  }
+  if (moves >= 2) {
+    for (let i = 0; i < squares.length; i++) {
+      $(squares[i]).css("background-color", '');
+      moves = 0;
+    }
+  } 
+
   var parsedId = parseInt(this.id);
   $(this).css("background-color", randomColors[parsedId]);
   console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
-  checkForMatch();
+  countMoves();
+  console.log("Click # " + moves);
+  // checkForMatch();
 }
+
+// count player moves
+function countMoves() {
+  moves++;
+  // counter.text("moves");
+  // startTimer();
+}
+
 function flipSquare() {
   for (let i = 0; i < squares.length; i++) {
     // click on square
     $(squares[i]).on('click', clickAction);
-    
+
   }
 }
 
 // function winMessage() {
 //   // Alert player if they win or lose
 // }
+
 
 function checkForMatch() {
   // // Check for matching colors when two squares are "flipped"
@@ -82,11 +96,11 @@ function checkForMatch() {
 //   console.log('timer revealed');
 // }
 // count player moves
-// function countMoves() {
-//   moves++;
-//   counter.text("moves");
-//   startTimer();
-// }
+function countMoves() {
+  moves++;
+  // counter.text("moves");
+  // startTimer();
+}
 // win conditions
 //  two colored divs need to match exactly 
 // when colors are matched, remove from randomColors? or keep them active and unclickable
@@ -99,7 +113,7 @@ $(document).ready(function () {
   // countMoves();
   flipSquare();
 
-  
+
   //default audio/background music?
 
   // Button Clicks
@@ -124,6 +138,7 @@ $(document).ready(function () {
     $('.col').css('background-color', '');
     // randomColors needs to refresh when this button is clicked!
     shuffle(randomColors);
+    moves = 0;
   });
 
 });
