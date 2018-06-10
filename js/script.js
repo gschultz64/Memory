@@ -1,6 +1,7 @@
 // global variables
 
 var moves = 0;
+var moveArray = [];
 // colors available for the game board
 var colors = [
   '#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F'
@@ -43,8 +44,6 @@ function clickAction() {
   $(this).css("background-color", randomColors[parsedId]);
   console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
   countMoves();
-  
-
   $('.moves').text(moves);
   checkForMatch();
 }
@@ -52,22 +51,22 @@ function clickAction() {
 // count player moves
 function countMoves() {
   moves++;
+  moveArray.push(moves);
 }
 
 function flipSquare() {
   for (let i = 0; i < squares.length; i++) {
     // click on square
     $(squares[i]).on('click', clickAction);
-
   }
 }
 
 function checkForMatch() {
   // // Check for matching colors when two squares are "flipped"
-  if (moves == 2) {
-    // console.log($('previousElementSibling').style.backgroundColor);
-    if ($('div').css("background-color") == $('div').prev().css("background-color")) {
-      // 
+  if (moves % 2 === 0) {
+    console.log(this);
+    if (moveArray.length - 1 == moveArray.length - 2) {
+    // if ($('div').css("background-color") == $('div').prev().css("background-color")) {
       console.log("You won!");
     } else {
       console.log("Try again.");
