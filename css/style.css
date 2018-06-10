@@ -71,11 +71,17 @@ p {
   width: 25% !important;
   margin: 1% 4%;
   }
+  div:nth-of-type(16)  {
+    visibility: hidden;
+  }
 }
 
 @media (max-width: 600px) {
   .col {
   width: 40% !important;
   margin: 1% 2%;
+  }
+  div:nth-of-type(16)  {
+    visibility: visible;
   }
 }

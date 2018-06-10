@@ -31,6 +31,9 @@ var squares = ['#0', '#1', '#2', '#3', '#4', '#5', '#6', '#7',
 
 // When player clicks on a square, change the background color to one of randomColors 
 function clickAction() {
+  if ($(this).css("background-color") != 'rgba(0, 0, 0, 0)') {
+    return;
+  }
   if (moves % 2 === 0) {
     for (let i = 0; i < squares.length; i++) {
       $(squares[i]).css("background-color", '');
@@ -40,6 +43,8 @@ function clickAction() {
   $(this).css("background-color", randomColors[parsedId]);
   console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
   countMoves();
+  
+
   $('.moves').text(moves);
   checkForMatch();
 }
