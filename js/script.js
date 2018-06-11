@@ -43,15 +43,16 @@ function clickAction() {
   var parsedId = parseInt(this.id);
   $(this).css("background-color", randomColors[parsedId]);
   console.log("box " + squares[parsedId] + " is " + randomColors[parsedId]);
-  countMoves();
+  countMoves(randomColors[parsedId]);
   $('.moves').text(moves);
   checkForMatch();
 }
 
 // count player moves
-function countMoves() {
+function countMoves(color) {
   moves++;
-  moveArray.push(moves);
+  moveArray.push(color);
+  console.log(moveArray)
 }
 
 function flipSquare() {
@@ -64,14 +65,18 @@ function flipSquare() {
 function checkForMatch() {
   // // Check for matching colors when two squares are "flipped"
   if (moves % 2 === 0) {
-    console.log(this);
-    if (moveArray.length - 1 == moveArray.length - 2) {
+    // console.log(this);
+    if (moveArray[moveArray.length - 1] == moveArray[moveArray.length - 2]) {
     // if ($('div').css("background-color") == $('div').prev().css("background-color")) {
       console.log("You won!");
     } else {
       console.log("Try again.");
     }
   } 
+}
+
+function takeTurn() {
+  $
 }
 
 // function winMessage() {
@@ -82,20 +87,6 @@ function checkForMatch() {
 
 // add disabled class to colors after match
 
-// have a timer, lose when timer runs out
-// var interval;
-// var startingTime = 60;
-// var remainingTime = 0;
-
-// function startTimer() {
-//   startingTime--;
-//   if(remainingTime <= 0) {
-//     //lose condition or game over
-//     console.log('the game is over');
-//   }
-//   $('.timer').append("<p>" + "0.00:" + remainingTime + "</p>");
-//   console.log('timer revealed');
-// }
 
 
 $(document).ready(function () {
@@ -127,7 +118,7 @@ $(document).ready(function () {
     shuffle(randomColors);
     moves = 0;
     $('.moves').text(moves);
-    $('.turn').text('Player ')
+    $('.turn').text('Player 1')
   });
 
 });
