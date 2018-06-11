@@ -1,7 +1,7 @@
 # Colorful Memory Game
 Memory/Concentration game - Project 1 for General Assembly WDI-19
 
-Live Site [gschultz64.github.io/project1]
+Live Site [http://gschultz64.github.io/project1]
 
 ## Wireframe
 
@@ -24,9 +24,12 @@ I wanted to allow the player to choose between playing alone or solitaire, again
 
 I really liked the idea of using the Spotify API to play different song clips for each color in the game, so I would like to try adding that in the future.
 
+I also have audio files that I can use for sound effects, but I didn't get to implementing those yet.
+
 Allow the player to choose the color palette for the game, especially if someone wants a color-blind mode.
 
 Add a mode to play the game forever without having to hit "reset game". So the board would have to reset as soon as all matches are made.
+
 
 
 ## Final Thoughts
