@@ -15,7 +15,7 @@ Once I picked a memory game, I started investigating using an API to make it mor
 It helped me to do a wireframe so that I could visualize what the game would look like, and which elements I would need. I also decided to use jQuery and Materialize CSS to keep the layout simple.
 
 ## Trials and Tribulations
-After getting stuck in API-land on Day 2, I hoped to get a lot done on Day 3 of project week. I felt like I made progress, but didn't anticipate quite how long certain tasks would take.
+After getting stuck in API-land on Day 2, I hoped to get a lot done on Day 3 of project week. I felt like I made progress, but didn't anticipate quite how long certain tasks would take. That theme continued throughout the week.
 
 I definitely struggled with understanding how the different data structures needed to fit together in order for the game to work, so that was my biggest roadblock throughout the week.
 
