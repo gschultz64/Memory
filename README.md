@@ -5,7 +5,7 @@ Live Site [http://gschultz64.github.io/project1]
 
 ## Wireframe
 
-img/Projecdt1wireframe.pdf
+img/Project1wireframe.pdf
 
 ## Planning
 I had a hard time deciding what kind of game to make, mostly because I wasn't sure what I was capable of achieving in one week. I thought the memory game would be a good way to build on the experience of making the tic-tac-toe game at the end of week 1. 
