@@ -27,7 +27,7 @@ var squareOwners = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 
 // colors available for the game board
 var colors = [
-  '#3C989E', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F'
+  '#ECE13C', '#5DB5A4', '#F4CDA5', '#F57A82', '#E37B40', '#5E005E', '#AB2F52', '#41733F'
 ];
 
 // New array that holds 2 copies of each color code from colors array
