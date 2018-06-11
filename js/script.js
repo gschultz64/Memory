@@ -62,28 +62,29 @@ function flipSquare() {
   }
 }
 
+function takeTurn() {
+  if (moves % 2 === 0) {
+    if ($('.turn').text() == 'Player 1') {
+      $('.turn').text('Player 2').removeClass('blue').addClass('yellow');
+    } else if ($('.turn').text() == 'Player 2') {
+      $('.turn').text('Player 1').removeClass('yellow').addClass('blue');
+    }
+  }
+}
+
 function checkForMatch() {
   // // Check for matching colors when two squares are "flipped"
   if (moves % 2 === 0) {
     // console.log(this);
     if (moveArray[moveArray.length - 1] == moveArray[moveArray.length - 2]) {
-    // if ($('div').css("background-color") == $('div').prev().css("background-color")) {
-      console.log("You won!");
+      $('.turn').append(' You won!');
     } else {
-      console.log("Try again.");
+      $('.turn').append(" Try again.");
     }
-  } 
+  } takeTurn();
 }
 
-function takeTurn() {
-  $
-}
 
-// function winMessage() {
-// // Alert player if they win or lose
-// }
-
-// winMessage();
 
 // add disabled class to colors after match
 
@@ -118,11 +119,9 @@ $(document).ready(function () {
     shuffle(randomColors);
     moves = 0;
     $('.moves').text(moves);
-    $('.turn').text('Player 1')
+    $('.turn').text('Player 1').removeClass('yellow').addClass('blue');
   });
-
 });
-
 // win conditions
 //  two colored divs need to match exactly 
 // when colors are matched, remove from randomColors? or keep them active and unclickable
