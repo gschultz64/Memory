@@ -9,9 +9,13 @@ h2 {
   margin-bottom: 0;
 }
 
+h3 {
+  font-size: 1.5rem;
+}
+
 p {
   display: inline-block;
-  margin-bottom: .5em;
+  margin-bottom: .3em;
   width: 60%;
   text-align: center;
 }
@@ -27,7 +31,7 @@ p {
   color: #fff;
 }
 
-.moves, .timer, .turn {
+.moves, .turn {
   display: inline-block;
 }
 
