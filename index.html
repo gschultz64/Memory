@@ -17,26 +17,17 @@
 <body>
   <div class="container">
     <h1>A Colorful Memory Game</h1>
-    <section class="gameInstruct">
+    <section>
       <h2>How to Play</h2>
-      <h3>Solitaire Game:</h3>
-      <p>Click to turn over any two squares. If the two squares match, you win! If they don't match, click another square. Repeat
-        as many times as you want!</p>
+      <h3>Player vs. Player Game:</h3>
+      <p>Player 1 starts: Click to turn over any two squares. If the two squares are the same color, you get a match point! If they don't match, Player 2 takes a turn to click two squares. Repeat until the board is full of colors. Click the "reset game" button to start over.</p>
     </section>
-    <section id="buttons">
-      <a class="waves-effect waves-purple btn" id="solitaire">Solitaire Game
-        <i class="material-icons left">person</i>
-      </a>
-      <a class="waves-effect waves-purple btn" id="twoPlayers">Player vs. Player
-        <i class="material-icons left">people</i>
-      </a>
-      <a class="waves-effect waves-purple btn" id="reset">Reset Game
-        <i class="material-icons right">autorenew</i>
-      </a>
-    </section>
+    <a class="waves-effect waves-purple btn" id="reset">Reset Game
+      <i class="material-icons right">autorenew</i>
+    </a>
     <section class="score-panel">
-      <div class="moves">0</div> Move(s)&nbsp;&nbsp;-&nbsp;&nbsp;
-      Turn: <div class="turn blue"></div>
+      <div class="moves">0</div> Move(s)&nbsp;&nbsp;-&nbsp;&nbsp; Turn:
+      <div class="turn blue"></div>
       <div class="message red"></div>
     </section>
     <div class="row">
