@@ -1,7 +1,7 @@
 # Colorful Memory Game
 Memory/Concentration game - Project 1 for General Assembly WDI-19
 
-[Live Site](http://gschultz64.github.io/project1)
+[Live Site](http://gschultz64.github.io/Memory)
 
 ## Wireframe
 
