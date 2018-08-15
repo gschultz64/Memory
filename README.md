@@ -1,11 +1,11 @@
 # Colorful Memory Game
 Memory/Concentration game - Project 1 for General Assembly WDI-19
 
-Live Site [http://gschultz64.github.io/project1]
+[Live Site](http://gschultz64.github.io/project1)
 
 ## Wireframe
 
-img/Project1wireframe.pdf
+![Wireframe](img/Project1wireframe.pdf)
 
 ## Planning
 I had a hard time deciding what kind of game to make, mostly because I wasn't sure what I was capable of achieving in one week. I thought the memory game would be a good way to build on the experience of making the tic-tac-toe game at the end of week 1. 
